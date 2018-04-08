@@ -13,18 +13,52 @@ height: 40px;
 .winner{
   color: #567458;
     font-size: 40px;
-    font-style: italic;
     font-family: monospace;
 }
 .App {
   text-align: center;
   width:500px;
+  display: flex;
 }
 .valo{
   background-color: #003333;
 }
 .valx{
   background-color: #663333;
+}
+
+.reset {
+  margin-top: 50px;
+  width: 100px;
+  margin-left: 178px;
+  cursor: pointer;
+  background: #ffdc7d;
+  background-image: -webkit-linear-gradient(top, #ffdc7d, #7388ff);
+  background-image: -moz-linear-gradient(top, #ffdc7d, #7388ff);
+  background-image: -ms-linear-gradient(top, #ffdc7d, #7388ff);
+  background-image: -o-linear-gradient(top, #ffdc7d, #7388ff);
+  background-image: linear-gradient(to bottom, #ffdc7d, #7388ff);
+  -webkit-border-radius: 18;
+  -moz-border-radius: 18;
+  border-radius: 18px;
+  -webkit-box-shadow: 2px 2px 24px #0a732d;
+  -moz-box-shadow: 2px 2px 24px #0a732d;
+  box-shadow: 2px 2px 24px #0a732d;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 37px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.reset:hover {
+  background: #ffb700;
+  background-image: -webkit-linear-gradient(top, #ffb700, #0026ff);
+  background-image: -moz-linear-gradient(top, #ffb700, #0026ff);
+  background-image: -ms-linear-gradient(top, #ffb700, #0026ff);
+  background-image: -o-linear-gradient(top, #ffb700, #0026ff);
+  background-image: linear-gradient(to bottom, #ffb700, #0026ff);
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

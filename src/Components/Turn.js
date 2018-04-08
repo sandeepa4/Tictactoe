@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 
 
 class Turn extends Component {
-  onClick(i){
-    console.log(i);
-  }
-
-
   render() {
+    const value=this.props.turnvalue;
+    var item;
+    if(value=="X"){
+      item= <div> Current Turn:<span className="valx">{value}</span></div>;
+    }
+    else if(value=="O"){
+      item= <div> Current Turn:<span className="valo">{value}</span></div>;
+    }else{
+      item=<div></div>
+    }
     return (
-        <div> <div className="winner">Current Turn:{this.props.turnvalue}</div></div>
+        <div> <div className="winner">{item}</div></div>
     );
   }
 }

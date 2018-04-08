@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Board from './Components/Board';
 import Winner from './Components/Winner';
 import Turn from './Components/Turn';
+import Reset from './Components/Reset';
 
 class App extends Component {
   constructor(){
@@ -23,6 +23,14 @@ getvalues(){
       }
       }
       return values;
+}
+resetValues(){
+  this.state={
+  boardvalue:this.getvalues(),
+  turnvalue:"X",
+  winner:""
+  }
+  this.setState(this.state);
 }
 handleClick(i){
   console.log("clicked"+i);
@@ -128,15 +136,15 @@ calculateWinner(pos){
   render() {
     return (
       <div className="App">
+      <div className="game">
 
-        <Turn turnvalue={this.state.turnvalue} />
         <Board boardvalue={this.state.boardvalue}  onClick={(i) => this.handleClick(i)}/>
+        </div>
+        <div className="controls">
+        <Turn turnvalue={this.state.turnvalue} />
         <Winner win={this.state.winner} />
-    {/*    <Projects projects={this.scope.projects}/>
-        <p className="App-intro">
-
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>*/}
+        <Reset onClick={() => this.resetValues()}/>
+        </div>
       </div>
     );
   }
